@@ -1,0 +1,29 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: poppins;
+}
+.whole-box{
+	background: #7A97FF !important;
+	width: 100% !important;
+	height: 100% !important;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.the-holder{
+	background: white !important;
+	height: 100% !important;
+	margin-left: 100px;
+	margin-right: 100px;
+	width: 70%;
+}
+.form-content{
+	background: transparent;
+	height: 100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login-logo-header{
+
+}
