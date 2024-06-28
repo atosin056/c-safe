@@ -18,9 +18,9 @@
 
 <body>
 
-<div class="whole-box" style="display: flex;justify-content: center;align-items: center;height: 170% !important;">
+<div class="whole-box" style="display: flex;justify-content: center;align-items: center;height: 150% !important;background-color: yellow;padding-top: 100px;padding-bottom: 100px;">
 	
-	<div style="background: white;width: 85%;height: 100%;">
+	<div style="background: white;width: 85%;height: auto;">
 		
 		<div style="display: flex;height: 100%;width: 100% !important;">
 			
@@ -28,17 +28,21 @@
 
 				<div style="background: transparent;width: 100% !important;height: 100% !important;padding-top: 87px;">
 					
-					<div style="display: flex;justify-content: center;">
-						
-						<div style="width: 48px;height: 48px;background: transparent;">
+					<a href="index.html">
+
+						<div style="display: flex;justify-content: center;">
 							
-							<img src="images/logo.png" style="width: 100% !important;height: 100% !important;">
+							<div style="width: 48px;height: 48px;background: transparent;">
+								
+								<img src="images/logo.png" style="width: 100% !important;height: 100% !important;">
+
+							</div>
+
+							<font style="padding-top: 16px;padding-left: 15px;font-size: 17px;font-weight: 600;color: black;">C-Safe Mail - Sign in</font>
 
 						</div>
 
-						<font style="padding-top: 16px;padding-left: 15px;font-size: 17px;font-weight: 600;">C-Safe Mail - Sign in</font>
-
-					</div>
+					</a>
 
 					<div style="padding-top: 20px;display: flex;justify-content: center;">
 
