@@ -18,19 +18,47 @@
 
 <body>
 
-	<div style="width: 100%;height: 100% !important;background-color: yellow;">
+	<div style="width: 100%;height: 100% !important;background-color: transparent;">
 		
 		<div style="display: flex;width: 100% !important;height: 100% !important;">
 			
-			<div class="col-lg-3 col-sm-3 col-md-3" style="background-color: blue;">
+			<div class="col-lg-3 col-sm-3 col-md-3" style="background-color: blue;padding: 0;padding-top: 30px;">
 				
+				<div style="display: flex;justify-content: center;background-color: transparent;height: auto !important;">
+					
+					<div style="width: 35px;height: 35px;padding-top: 10px;background-color: transparent;">
+						
+						<img src="images/ham.png" style="width: 100% !important;">
 
+					</div>
+
+					<div style="display: flex;">
+						
+						<div style="width: 100px;padding-left: 10px;background-color: transparent;height: auto;">
+							
+							<img src="images/logos.png" style="width: 100% !important;">
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div style="margin-top: 20px;">
+
+					<div style="width: 100%;background-color: red;">
+						
+						Tosin
+
+					</div>
+
+				</div>
 
 			</div>
 
-			<div class="col-lg-9 col-md-9 col-sm-9" style="background-color: white;padding: 0;">
+			<div class="col-lg-9 col-md-9 col-sm-9" style="background-color: #F5F6FA;padding: 0;">
 				
-				<div style="width: 100% !important;height: 60px;background-color: red;"></div>
+				<div style="width: 100% !important;height: 60px;background-color: white;"></div>
 
 			</div>
 

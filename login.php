@@ -18,7 +18,7 @@
 
 <body>
 
-<div class="whole-box" style="display: flex;justify-content: center;align-items: center;height: 150% !important;background-color: yellow;padding-top: 100px;padding-bottom: 100px;">
+<div class="whole-box" style="display: flex;justify-content: center;align-items: center;height: 150% !important;background-color: #7A97FF;padding-top: 100px;padding-bottom: 100px;">
 	
 	<div style="background: white;width: 85%;height: auto;">
 		
@@ -38,11 +38,13 @@
 
 							</div>
 
+						</a>
+
 							<font style="padding-top: 16px;padding-left: 15px;font-size: 17px;font-weight: 600;color: black;">C-Safe Mail - Sign in</font>
 
 						</div>
 
-					</a>
+					
 
 					<div style="padding-top: 20px;display: flex;justify-content: center;">
 
