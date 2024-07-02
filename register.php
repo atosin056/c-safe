@@ -156,7 +156,7 @@
 
 									<div class="form-group" style="padding-top: 45px;">
 									
-										<a href="login.php" style="text-decoration: none;"><input type="submit" name="submit" class="form-control" style="height: 50px;font-size: 18px;border-radius: 100000000px;background: #0096C7;border: 0px;color: white;" value="Proceed"></a>
+										<a href="login.php" style="text-decoration: none;"><input type="text" name="submit" class="form-control" style="height: 50px;font-size: 18px;border-radius: 100000000px;background: #0096C7;border: 0px;color: white;cursor: pointer;text-align: center;" value="Proceed"></a>
 
 									</div>
 
