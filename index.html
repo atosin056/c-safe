@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/image 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="victor.css">
     <title>C-Safe</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                 <a href="register.php"><button class="Register">Register</button></a>
             </div>
         </div>
-        <div class="first">
-            <div class="info">
+        <div class="first" style="margin: 0;">
+            <div class="info" style="margin-top: 0; padding-top: 0;">
                 <div>
                     <h1 style="font-size: 45px; margin-top: 150px;">Easy, Good And <br> Simple To Use</h1>
                     <p>An online Platform where children can communicate <br> with one another</p>
@@ -31,13 +32,13 @@
                 <img src="images/Rectangle 14.png" alt="">
             </div>
             <div class="register2">
-                <button class="Login">Login</button>
-                <button class="Register">Register</button>
+                <a href="login.php"><button class="Login">Login</button></a>
+                <a href="register.php"><button class="Register">Register</button></a>
             </div>
         </div>
         <div class="second">
             <div class="register2">
-                <button class="faq">Why C-safe?</button>
+                <button class="faq-btn">Why C-safe?</button>
             </div>
             <div class="info" style="gap: 50px;">
                 <div class="word">
@@ -53,9 +54,9 @@
                 <img src="images/Group 30.png" alt="" style="width: 656px; height: 473px;">
             </div>
         </div>
-        <div class="second">
+        <div class="second" style="background-color: #fff;">
             <div class="register2">
-                <button class="faq">Key Features</button>
+                <button class="faq-btn">Key Features</button>
             </div>
             <div class="info" style="gap: 50px;">
                 <img src="images/image 44.png" alt="" style="width: 661px; height: 375px;">
@@ -71,176 +72,201 @@
         </div>
         <div class="second">
             <div class="register2">
-                <button class="faq">FAQs and Help</button>
+                <button class="faq-btn">FAQs and Help</button>
             </div>
             <div class="info" style="gap: 50px;">
+                <div class="word2">
+                    <hr>
+                    <div class="faq">
+                        <div class="faq1">
+                            <p>What makes CSAFE different from other email platforms?</p>
+                            <img src="images/Vectordown.png" alt="" onclick="faq1()" id="vector">
+                            <img src="images/Vector.png" alt="" id="vector2" style="display: none;" onclick="faqReverse()">
+                        </div>
+                        <div class="faq1ans" style="display: none;" id="faq1ans">
+                            <p>CSAFE is specifically designed for children, offering a safe, engaging, and <br> educational experience with features tailored to their needs and <br> parental oversight.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="faq1">
+                            <p>How does CSAFE ensure my child's safety online?</p>
+                            <img src="images/Vectordown.png" alt="" onclick="faq2()" id="vector1">
+                            <img src="images/Vector.png" alt="" id="vector3" style="display: none;" onclick="faqReverse2()">
+                        </div>
+                        <div class="faq1ans" style="display: none;" id="faq2ans">
+                            <p>CSAFE uses robust parental controls and privacy settings to create a secure <br> environment, allowing parents to monitor activities and manage <br> communications.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="faq1">
+                            <p>How does CSAFE support my child's learning?</p>
+                            <img src="images/Vectordown.png" alt="" onclick="faq3()" id="vector-i">
+                            <img src="images/Vector.png" alt="" id="vector4" style="display: none;" onclick="faqReverse3()">
+                        </div>
+                        <div class="faq1ans" style="display: none;" id="faq3ans">
+                            <p>CSAFE provides educational tools like email writing tips and online <br> safety guidelines, helping children develop important digital skills.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="faq1">
+                            <p>Why is CSAFE a good choice for kids' email?</p>
+                            <img src="images/Vectordown.png" alt="" onclick="faq4()" id="vector-ii">
+                            <img src="images/Vector.png" alt="" id="vector5" style="display: none;" onclick="faqReverse4()">
+                        </div>
+                        <div class="faq1ans" style="display: none;" id="faq4ans">
+                            <p>CSAFE offers a user-friendly interface designed for children, with <br> customizable themes and avatars, making it easy and fun to <br> use.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="help">
+                    <h1>Need more help?</h1>
+                    <p>Still have some questions? Check out our <br>
+                        tips and guidelines that we have outlined <br>
+                        for you</p>
+                    <button class="Register">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="second" style="background-color: white;">
+            <div class="register2">
+                <button class="faq-btn">Community Center</button>
+            </div>
+            <div class="welcome">
+                <h2 style="color: #239FDB; font-family: Poppins, sans-serif;">Welcome to the community Center</h2>
+                <p style="font-family: Poppins, sans-serif;">Get the latest news and updates about things going around for you to catch up</p></div>
+            <div class="info" style="gap: 30px; padding-left: 60px;">
                 <div class="word">
-                    <div class="faq1">
-                        <hr>
-                        <p>What makes CSAFE different from other email platforms?</p>
-                        <hr>
+                    <h2>Latest Updates</h2>
+                    <div class="notes">
+                        <div>
+                            <h1>Feature Releases:</h1>
+                            <p>We continuously work to enhance your experience. Recently, we've introduced new features such as Parental Controls to ensure a safer environment for our users.</p>
+                        </div>
+                        <div>
+                            <h1>Event Announcements:</h1>
+                            <p>Don't miss out on our upcoming events! Join us for virtual meetups, online safety workshops, and fun contests. Mark your calendars for our next Virtual Meetup on July 15th.</p>
+                        </div>
+                        <div>
+                            <h1>Partnership Announcements:</h1>
+                            <p>CSAFE is expanding its horizons through exciting new partnerships. We've teamed up with Kids Code Club to bring you more opportunities to learn and grow.</p>
+                        </div>
+                        <div>
+                            <h1>Content Releases:</h1>
+                            <p>Stay engaged with our latest blog posts and videos. Our recent post, "Staying Safe Online – Tips for Kids," is packed with valuable information for young users.</p>
+                        </div>
+                        <button class="Register">Learn More</button>
+                    </div>
+                </div>
+                <img src="images/image 45.png" alt="" style="width: 661px; height: 376px; margin-top: 50px">
+            </div>
+        </div>
+        <div class="second" style="background-color: #fff; margin-top: 0">
+            <div class="register2">
+                <button class="faq-btn">Safety Guidelines</button>
+            </div>
+            <div class="safe">
+                <h1>Safety Guidelines to follow when using C-safe</h1>
+                <div class="guide">
+                    <div class="element">
+                        <h1>Protect Personal Information:</h1>
+                        <p>Do not share personal information such as full names, addresses, phone numbers, email addresses, passwords, or photos without parental permission.</p>
+                    </div>
+                    <div class="element">
+                        <h1>Privacy Settings Awareness:</h1>
+                        <p>Set your profile to private and restrict access to your information only to approved contacts. Familiarize yourself with the platform's privacy settings.</p>
+                    </div>
+                    <div class="element">
+                        <h1>Safe Online Behaviors:</h1>
+                        <p>Log out after each session, use strong and unique passwords, and avoid clicking on suspicious links or downloading unknown files.</p>
+                    </div>
+                    <div class="element">
+                        <h1>Parental Involvement:</h1>
+                        <p>Parents should be actively involved in their children's online activities. Discuss any concerns or issues with them regularly.</p>
+                    </div>
+                    <div class="element">
+                        <h1>Emergency Procedures:</h1>
+                        <p>In case of emergencies or if you feel threatened online, seek help from a trusted adult immediately. Know the procedures to follow if you encounter any unsafe situations.</p>
                     </div>
                 </div>
             </div>
-            <div class="help">
-
+        </div>
+        <div class="second" style="background-color: white; margin-top: 0;">
+            <div class="register2">
+                <button class="faq-btn">Testimonials</button>
             </div>
+
+            <div style="display: flex;justify-content: space-between;width: 100% !important;padding-left: 100px;padding-right: 100px;padding-top: 60px;">
+                <div class="testimonials">
+                    <div class="story">
+                        <div style="width: 100%;display: flex;justify-content: center;">
+                        <img src="images/Ellipse 29.png" alt=""></div>
+                        <div style="text-align: center;margin-top: 10px;">
+                        <p>C-safe has allowed me to be able to communicate with my friends all over the world. Through c-safe i can be able to talk with paul and some of my other fiends. Lorem ipsum Lorem ipsum ipsum ipaum</p>
+                        <h2 style="padding-top: 10px; font-size: 16px;">Thank You C-safe</h2>
+                        <div class="rating">
+                            <img src="images/Frame 14.png" alt="">
+                            <p style="font-family: poppins;">Aliyah Jones</p>
+                        </div></div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <div class="story">
+                        <div style="width: 100%;display: flex;justify-content: center;">
+                        <img src="images/Ellipse 29.png" alt=""></div>
+                        <div style="text-align: center;margin-top: 10px;">
+                        <p>C-safe has allowed me to be able to communicate with my friends all over the world. Through c-safe i can be able to talk with paul and some of my other fiends. Lorem ipsum Lorem ipsum ipsum ipaum</p>
+                        <h2 style="padding-top: 10px; font-size: 16px;">Thank You C-safe</h2>
+                        <div class="rating">
+                            <img src="images/Frame 14.png" alt="">
+                            <p style="font-family: poppins;">Aliyah Jones</p>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <div class="story">
+                        <div style="width: 100%;display: flex;justify-content: center;">
+                        <img src="images/Ellipse 29.png" alt=""></div>
+                        <div style="text-align: center;margin-top: 10px;">
+                        <p>C-safe has allowed me to be able to communicate with my friends all over the world. Through c-safe i can be able to talk with paul and some of my other fiends. Lorem ipsum Lorem ipsum ipsum ipaum</p>
+                        <h2 style="padding-top: 10px; font-size: 16px;">Thank You C-safe</h2>
+                        <div class="rating">
+                            <img src="images/Frame 14.png" alt="">
+                            <p style="font-family: poppins;">Aliyah Jones</p>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+            <p style="font-size: 14px; font-family: Poppins, sans-serif; text-align: center; font-weight: 600; margin-top: 20px;">And C-safe will help you so much more</p>
+        </div>
+        <div class="second">
+            <div class="logo" style="margin-left: 45%; margin-top: 50px;">
+                <img src="images/image 1.png" alt="">
+                <p>C-Safe</p>
+            </div>
+            <div class="comm">
+                <h1>Start Communicating Today</h1>
+                <p>Get Started with C-safe</p>
+                <div class="register2">
+                    <button class="faq-btn" style="margin-left: 36%;"><a href="register.php" style="text-decoration: none; color: white;">Register Now</a></button>
+                </div>
+            </div>
+            <div class="img">
+                <img src="images/image 47.png" alt="" style="width: 289px; height: 281px;">
+                <img src="images/image 49.png" alt="" style="width: 193px; height: 193px;">
+                <img src="images/image 48.png" alt="" style="width: 159px; height: 148px; margin-top: 50px;">
+            </div>
+        </div>
+        <div style="width: 100% !important;">
+            <img src="images/image 44.png" alt="" style="margin-left: 25%;"></div>
+        <div class="footer">
+            
+            <div><p style="font-family: poppins;">Copyrights &copy; C-safe 2024</p></div>
+        </div>
         </div>
     </div>
 </body>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-h1{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-body{
-    background-color: #F5F5F5;
-}
-.loading h1{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    /* margin-left: 140px; */
-    text-align: center;
-}
-.loading{
-    background-color: #D2EDFB;
-    display: block;
-    padding-top: 100px;
-    /* padding-left: 455px; */
-    height: 100vh;
-}
-.loading img{
-    margin-left: 35.5%;
-    animation: spin 2s linear infinite;
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    padding-bottom: 5px;
-    box-shadow: 0px 0px 10px #c0c0c0;
-}
-.logo{
-    display: flex;
-    padding-left: 10px;
-    gap: 10px;
-    padding-top: 10px;
-}
-.logo img{
-    width: 50px;
-    height: 50px;
-}
-.logo p{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    margin-top: 15px;
-}
-.register{
-    display: flex;
-    padding-top: 20px;
-    gap: 15px;
-    padding-right: 10px;
-}
-.Login{
-    color: white;
-    background-color: rgb(77, 77, 224);
-    border: 0;
-    padding: 2.5px 35px;
-    height: 35px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    border-radius: 7px;
-    cursor: pointer;
-}
-.Login:hover{
-    background-color: white;
-    color: rgb(77, 77, 224);
-    border: 2px solid rgb(77, 77, 224);
-}
-.Register{
-    color: black;
-    background-color: white;
-    border: 2px solid lightblue;
-    padding: 2.5px 30px;
-    height: 35px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    border-radius: 7px;
-    cursor: pointer;
-}
-.Register:hover{
-    background-color: white;
-    color: rgb(77, 77, 224);
-    border: 2px solid rgb(77, 77, 224);
-}
-.first{
-    background-color: white;
-    margin-top: 20px;
-    padding-bottom: 50px;
-}
-.info{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 140px;
-    padding-left: 140px;
-}
-.info img{
-    width: 500px;
-    height: 500px;
-    margin-top: 30px;
-}
-.info h1{
-    padding-top: 50px;
-}
-.info p{
-    opacity: 0.6;
-    font-family: "Poppins", sans-serif;
-    margin-top: 20px;
-}
-.register2{
-    display: flex;
-    padding-top: 20px;
-    gap: 15px;
-    padding-right: 10px;
-    padding-left: 140px;
-}
-.second{
-    margin-top: 20px;
-    padding-bottom: 50px;
-}
-.faq{
-    color: white;
-    background-color: rgb(77, 77, 224);
-    border: 0;
-    padding: 2.5px 55px;
-    height: 35px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    border-radius: 20px;
-    margin-left: 35%;
-}
-.word h1{
-    font-size: 16px;
-}
-.word p{
-    font-size: 10px;
-    font-family: "Poppins", sans-serif;
-}
-</style>
+
 <script>
     function showContent() {
     document.getElementById("loading").style.display = "none";
@@ -248,5 +274,46 @@ body{
 }
 
 setTimeout(showContent, 3000);
+
+function faq1() {
+    document.getElementById('faq1ans').style.display = "block";
+    document.getElementById('vector2').style.display = "block";
+    document.getElementById('vector').style.display = "none";
+}
+function faqReverse() {
+    document.getElementById('faq1ans').style.display = "none";
+    document.getElementById('vector2').style.display = "none";
+    document.getElementById('vector').style.display = "block";
+}
+function faq2() {
+    document.getElementById('faq2ans').style.display = "block";
+    document.getElementById('vector3').style.display = "block";
+    document.getElementById('vector1').style.display = "none";
+}
+function faqReverse2() {
+    document.getElementById('faq2ans').style.display = "none";
+    document.getElementById('vector3').style.display = "none";
+    document.getElementById('vector1').style.display = "block";
+}
+function faq3() {
+    document.getElementById('faq3ans').style.display = "block";
+    document.getElementById('vector4').style.display = "block";
+    document.getElementById('vector-i').style.display = "none";
+}
+function faqReverse3() {
+    document.getElementById('faq3ans').style.display = "none";
+    document.getElementById('vector4').style.display = "none";
+    document.getElementById('vector-i').style.display = "block";
+}
+function faq4() {
+    document.getElementById('faq4ans').style.display = "block";
+    document.getElementById('vector5').style.display = "block";
+    document.getElementById('vector-ii').style.display = "none";
+}
+function faqReverse4() {
+    document.getElementById('faq4ans').style.display = "none";
+    document.getElementById('vector5').style.display = "none";
+    document.getElementById('vector-ii').style.display = "block";
+}
 </script>
 </html>
