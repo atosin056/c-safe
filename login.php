@@ -76,7 +76,11 @@
 
 								<div class="form-group" style="margin-top: 50px;">
 								
-									<input type="submit" name="submit" class="form-control" style="border: none;height: 62px;border-radius: 0px !important;border-top-left-radius: 20px !important;border-bottom-right-radius: 20px !important;background: #239FDB;color: white;" value="Login">
+									<a href="login.php" style="text-decoration: none;">
+
+										<input type="submit" name="submit" class="form-control" style="border: none;height: 62px;border-radius: 0px !important;border-top-left-radius: 20px !important;border-bottom-right-radius: 20px !important;background: #239FDB;color: white;" value="Login">
+
+									</a>
 
 								</div>
 
