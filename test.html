@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-SAFE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f7f9fc;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            width: 100%;
+            background-color: #f7f9fc;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+            min-height: 79px; /* Ensure the header has a minimum height */
+        }
+        .header .search-bar {
+            width: 300px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .user-info p {
+            margin-left: 10px; /* Add margin-left to create space */
+        }
+        .message-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #aaa;
+            flex-grow: 1; /* Ensure message area takes the remaining space */
+        }
+        .message-area svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .message-area p {
+            margin: 0;
+        }
+        .inbox {
+            background-color: aqua;
+            border: none; 
+            border-radius: 5px; 
+        }
+        .icons-text {
+            align-items: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Inbox/Group 20.png">
+        </div>
+        <div style="width: 100% !important; display: flex; justify-content: center; padding: 0; margin: 10px;">
+            <div class="New-Messages" style="background-color: #0096C7; display: flex; justify-content: center; align-items: center; height: 50px; width: 200px; padding: 0; border-radius: 10px;">
+                <h5 style="color: white; padding: 0; margin: 0;">New Messages</h5>
+            </div>
+        </div>
+        <div style="background-color: #B5E6FE; border-top-right-radius: 100px; border-bottom-right-radius: 100px; width: 100%; height: 50px; margin-top: 10px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; background-color: transparent; padding: 0; margin: 0; padding-left: 20px; padding-right: 20px;">
+                <div style="padding-top: 0 !important;">
+                    <h4 style="font-size: 15px;">Inbox</h4>
+                </div>
+                <div style="padding-top: 0 !important; padding-right: 35px;">
+                    <h4 style="font-size: 15px; color: grey;">203</h4>
+                </div>
+            </div>
+        </div>
+        <div class="icons-text" style="align-items: center;">
+            <div class="drafts-icons" style="margin-left: 0px; text-align: left;">
+                <span class="did">
+                    <a href="#">
+                        <img src="Inbox/image 13.png" style="justify-content: space-between;"> 
+                        Drafts
+                    </a>
+                </span>
+            </div>
+            <div class="mail-icons" style="margin: left 0px; text-align: left;">
+                <a href="#"><img src="Inbox/image 14.png"> Mail</a>
+            </div>
+            <div class="starred-icons" style="text-align: left; display: block; margin-left: 0px;">
+                <span>
+                    <a href="#" style="align-items: center;"><img src="Inbox/image 23.png" style="height: 40px; width: 40px;">Starred</a>
+                </span>
+            </div>
+            <div class="archived-icons" style="text-align: left; display: inline; margin-left: 0px;">
+                <a href="#"><img src="Inbox/image 16.png">Archived</a>
+            </div>
+            <a href="#"><img src="Inbox/image 26.png">Trash</a>
+            <a href="#"><img src="Inbox/image 25.png"> Change Password</a>
+            <div class="logout-icons" style="align-items: center;">
+                <a href="#"><img src="Inbox/Group 88.png"></a>
+            </div>
+            <a href="#"><img src="Inbox/image 27.png"> Account</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div style="display: flex; width: 100%;">
+                <div style="width: 60%; display: flex; align-items: center;">
+                    <input type="text" class="search-bar" placeholder="Search for a message" style="width: 351px; height: 46px; border-radius: 30px; text-align: center">
+                </div>
+                <div class="user-info"> 
+                    <img src="Inbox/Group 105.png" alt="User Avatar" style="height: 30px; width: 30px;">
+                    <p style="font-size: 10px;">WELCOME OKUNOYE PAUL OLUWATOMISIN</p>
+                    <div class="icons" style="justify-content: space-between;">
+                        <img src="Inbox/image 6.png" style="width: 28px; height: 28px; margin-left: 10px;">
+                        <img src="Inbox/Vector.png" style=" height: 20px; width:  21.64px; margin-left: 10px;">
+                        <img src="Inbox/Group 107.png" style="width: 5px; height: 25px; margin-left: 10px;">                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message-area">
+            <!-- Message area content goes here -->
+        </div>
+    </div>
+</body>
+</html>
+
