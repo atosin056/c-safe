@@ -34,11 +34,15 @@
 
 						<div>
 
-						<div style="width: 100px;height: auto;background: transparent;">
-							
-							<img src="images/logos.png" style="width: 100px;height: 40px;">
+						<a href="index.html" style="text-decoration: none;">
 
-						</div>
+							<div style="width: 100px;height: auto;background: transparent;">
+								
+								<img src="images/logos.png" style="width: 100px;height: 40px;">
+
+							</div>
+
+						</a>
 
 					</div>
 
