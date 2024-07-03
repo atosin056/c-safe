@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-SAFE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: initial; /* or specify a different color if needed */
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f7f9fc;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            width: 100%;
+            background-color: #f7f9fc;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+            min-height: 79px; /* Ensure the header has a minimum height */
+        }
+        .header .search-bar {
+            width: 300px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .user-info p {
+            margin-left: 10px; /* Add margin-left to create space */
+        }
+        .message-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #aaa;
+            flex-grow: 1; /* Ensure message area takes the remaining space */
+        }
+        .message-area svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .message-area p {
+            margin: 0;
+        }
+        .inbox {
+            background-color: aqua;
+            border: none; 
+            border-radius: 5px; 
+        }
+        .icons-text {
+            align-items: center;
+            position: relative;
+        }
+         #modal {
+            display: none;
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .tiny-icons {
+            display: flex;
+            justify-content: space-around; /* Distributes space around items */
+            align-items: center; /* Aligns items vertically */
+            width: 100%; /* Makes the container full width */
+            margin: 10px 0; /* Adds space above and below the container */
+        }
+        .tiny-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px; /* Adds space between the icons */
+        }
+        .tiny-icons img {
+            width: 24px; /* Set width of the icons */
+            height: 24px; /* Set height of the icons */
+        }
+        .items .items-list{
+            width: 970px;
+            height: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="Inbox/Group 20.png">
+        </div>
+        <div style="width: 100% !important; display: flex; justify-content: center; padding: 0; margin: 10px;">
+            <div class="New-Messages" style="background-color: #0096C7; display: flex; justify-content: center; align-items: center; height: 50px; width: 200px; padding: 0; border-radius: 10px;" id="openModalBtn">
+                <h5 style="color: white; padding: 0; margin: 0;">New Messages</h5>
+            </div>
+        </div>
+        <div style="background-color: #B5E6FE; border-top-right-radius: 100px; border-bottom-right-radius: 100px; width: 100%; height: 50px; margin-top: 10px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; background-color: transparent; padding: 0; margin: 0; padding-left: 20px; padding-right: 20px;">
+                <div style="padding-top: 0 !important;">
+                    <h4 style="font-size: 15px;">Inbox</h4>
+                </div>
+                <div style="padding-top: 0 !important; padding-right: 35px;">
+                    <h4 style="font-size: 15px; color: grey;">203</h4>
+                </div>
+            </div>
+        </div>
+        <div class="icons-text" style="align-items: center;">
+            <div class="drafts-icons" style="margin-left: 0px; text-align: left;">
+                <span class="did">
+                    <a href="#">
+                        <img src="Inbox/image 13.png" style="justify-content: space-between;"> 
+                        Drafts
+                    </a>
+                </span>
+            </div>
+            <div class="mail-icons" style="margin: left 0px; text-align: left;">
+                <a href="#"><img src="Inbox/image 14.png"> Mail</a>
+            </div>
+            <div class="starred-icons" style="text-align: left; display: block; margin-left: 0px;">
+                <span>
+                    <a href="#" style="align-items: center;"><img src="Inbox/image 23.png" style="height: 40px; width: 40px;">Starred</a>
+                </span>
+            </div>
+            <div class="archived-icons" style="text-align: left; display: inline; margin-left: 0px;">
+                <a href="#"><img src="Inbox/image 16.png">Archived</a>
+            </div>
+            <a href="#"><img src="Inbox/image 26.png">Trash</a>
+            <a href="#"><img src="Inbox/image 25.png"> Change Password</a>
+            <div class="logout-icons" style="align-items: center;">
+                <a href="#"><img src="Inbox/Group 88.png"></a>
+            </div>
+            <a href="#"><img src="Inbox/image 27.png"> Account</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div style="display: flex; width: 100%;">
+                <div style="width: 60%; display: flex; align-items: center;">
+                    <input type="text" class="search-bar" placeholder="Search for a message" style="width: 351px; height: 46px; border-radius: 30px; text-align: center">
+                </div>
+                <div class="user-info"> 
+                    <img src="Inbox/Group 105.png" alt="User Avatar" style="height: 30px; width: 30px;">
+                    <p style="font-size: 10px;">WELCOME OKUNOYE PAUL OLUWATOMISIN</p>
+                    <div class="icons" style="justify-content: space-between;">
+                        <img src="Inbox/image 6.png" style="width: 28px; height: 28px; margin-left: 10px;">
+                        <img src="Inbox/Vector.png">
+                        <img src="Inbox/Group 107.png" style="width: 5px; height: 25px;">                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="message-area">
+            <div class="tiny-icons" style="display: flex;">
+                <a href="#"><img src="Inbox/Left Arrow.png"></a>
+                <a href="#"><img src="Inbox/mail.png"></a>
+                <a href="#"><img src="Inbox/trash-2.png"></a>
+                <a href="#"><img src="Inbox/clock.png"></a>
+                <a href="#"><img src="Inbox/Line 14.png"></a>
+                <a href="#"><img src="Inbox/alert-octagon.png"></a>
+                <a href="#"><img src="Inbox/archive.png"></a> -->
+                
+                <div class="items">
+                    <div class="items-list" style="display: grid; width: 200%;">
+                        <a href="#"><img src="Inbox/Group 111.png" ></a>
+                        <a href="#"> <img src="Inbox/Group 102.png">
+                            <a href="#"><img src="Inbox/Group 113.png">
+                                <a href="#"><img src="Inbox/Group 114.png">
+                                    <a href="#"><img src="Inbox/Group 115.png">
+                                        <a href="#"><img src="Inbox/Group 116.png">
+                        <!-- <img src="Inbox/Group 109.png"> -->
+                        <a href="#"><img src="Inbox/Group 242.png"></a>
+                        <a href="#"><img src="Inbox/Group 119.png"></a>
+                        <a href="#"><img src="Inbox/Group 202.png"></a>
+                        <a href="#"><img src="Inbox/Group 120.png"></a>
+                        <a href="#"><img src="Inbox/Group 120.png"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="modal">
+    <div style="background-color: transparent;width: 100%;height: 100%;position: fixed;">
+        
+        <div style="width: 100%;height: 100% !important;display: flex;justify-content: flex-end;align-items: flex-end;background-color: transparent;">
+            
+            <div style="height: 500px;width: 600px;background-color: white;border-top-left-radius: 20px;border-top-right-radius: 20px;box-shadow: 0px 0px 20px grey;">
+                
+                <div style="background-color: #F5F6FA;width: 100%;height: 60px;border-radius: inherit;display: flex;align-items: center;padding-left: 15px;">
+
+                    <div style="display: flex;justify-content: space-between;width: 100%;background-color: transparent;padding-right: 20px;">
+
+                        <div style="display: flex;align-items: center;height: 100%;padding-top: 20px;padding-left: 11px;">
+                        
+                            <p style="font-weight: 700;color: grey;font-size: 19px;font-family: poppins;">New Message</p>
+
+                        </div>
+
+                        <div style="display: flex;align-items: center;">
+                            
+                            <div style="width: 20px;cursor: pointer;" id="closeModalBtn">
+                                
+                                <img src="images/x.png" style="width: 100% !important;height: 15px;">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="width: 100% !important;background-color: white;">
+                    
+                    <form method="POST" style="padding-left: 25px;padding-right: 25px;width: 100%;">
+                        
+                        <div class="form-group">
+                            
+                            <input type="email" name="recipient" class="form-control" style="background-color: transparent;border: none;border-bottom: 1px solid #c0c0c0;border-radius: 0;height: 50px;padding-left: 0;font-size: 15px;" placeholder="Recipient">
+
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="text" name="subject" class="form-control" style="background-color: transparent;border: none;border-bottom: 1px solid #c0c0c0;border-radius: 0;height: 50px;padding-left: 0;font-size: 15px;" placeholder="Subject">
+
+                        </div>
+
+                        <div class="form-group" style="margin-top: 20px;">
+                            
+                            <textarea name="message" class="form-control" style="background-color: transparent;border: 1px solid #c0c0c0;border-radius: 10px;height: 250px;padding-left: 0;font-size: 15px;" placeholder=""></textarea>
+
+                        </div>
+
+                        <div class="form-group" style="margin-top: 15px;display: flex;">
+
+                            <div>
+                            
+                                <input type="submit" name="submit" value="Send" style="padding: 10px 35px;border: none;background-color: #0096C7;border-radius: 100px;color: white;font-weight: 700;font-family: poppins;">
+
+                            </div>
+
+                            <div style="display: flex;margin-top: 10px;margin-left: 20px;">
+                                
+                                <div>
+                                    
+                                    <img src="images/clip.png" style="width: 100% !important;">
+
+                                </div>
+
+                                <div style="padding-left: 10px;">
+                                    
+                                    <img src="images/banger.png" style="width: 100% !important;">
+
+                                </div>
+
+                                <div style="padding-left: 10px;">
+                                    
+                                    <img src="images/smile.png" style="width: 100% !important;">
+
+                                </div>
+
+                                <div style="padding-left: 10px;">
+                                    
+                                    <img src="images/edit-3.png" style="width: 100% !important;">
+
+                                </div>
+
+                                <div style="padding-left: 10px;">
+                                    
+                                    <img src="images/image.png" style="width: 100% !important;">
+
+                                </div>
+
+                                <div style="padding-left: 10px;">
+                                    
+                                    <img src="images/more.png" style="width: 100% !important;">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+
+    // function showContent() {
+        
+    //     var open = document.getElementById('open');
+
+    //     open.style.display.block
+
+    // }
+
+    //    var tosin setTimeout(showContent, 3000);
+
+    //    if (tosin) {
+
+            
+
+    //    }
+    // JavaScript to toggle and close the modal
+        const modal = document.getElementById('modal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+</script>
+</html>

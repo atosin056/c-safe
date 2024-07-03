@@ -76,7 +76,7 @@
 
 								<div class="form-group" style="margin-top: 50px;">
 								
-									<a href="inbox.html" style="text-decoration: none;">
+									<a href="start.html" style="text-decoration: none;">
 
 										<input type="text" name="submit" class="form-control" style="border: none;height: 62px;border-radius: 0px !important;border-top-left-radius: 20px !important;border-bottom-right-radius: 20px !important;background: #239FDB;color: white;cursor: pointer;text-align: center;" value="Login">
 
